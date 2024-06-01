@@ -1,5 +1,5 @@
 const productsList = (req, res) => {
-    res.render('index', {title: 'Products'});
+    res.render('product-list', {title: 'Products'});
 };
 
 const productInfo = (req, res) => {

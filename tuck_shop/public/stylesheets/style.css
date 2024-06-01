@@ -54,6 +54,7 @@ margin-bottom: 0.5em;
 .badge-default, .btn-primary {
 background-color: #ad1d28;
 border-color: #911821;
+float: right
 }
 h4 a, h4 a:hover {
 color: #fff;
@@ -72,6 +73,7 @@ h4 small {
   }
   .facilities span.badge {
   margin-right: 2px;
+  background-color: yellowgreen;
   }
   p {
   margin-bottom: 0.65rem;
