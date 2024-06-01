@@ -7,7 +7,7 @@ const productInfo = (req, res) => {
 };
 
 const addReview = (req, res) => {
-    res.render('index', {title: 'Add a Review'});
+    res.render('product-review', {title: 'Add a Review'});
 };
 
 
