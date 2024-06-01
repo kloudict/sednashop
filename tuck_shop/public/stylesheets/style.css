@@ -84,6 +84,7 @@ h4 small {
   }
 
   body {
+  padding-top: 70px;
   font-family: "Cabin", Arial, sans-serif;
   color: #fff;
   background-color: #108a93;
