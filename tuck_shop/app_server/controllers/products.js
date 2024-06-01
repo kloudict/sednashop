@@ -3,7 +3,7 @@ const productsList = (req, res) => {
 };
 
 const productInfo = (req, res) => {
-    res.render('index', {title: 'Product Info'});
+    res.render('product-info', {title: 'Product Info'});
 };
 
 const addReview = (req, res) => {

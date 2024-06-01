@@ -75,6 +75,11 @@ h4 small {
   margin-right: 2px;
   background-color: yellowgreen;
   }
+
+  .badge-warning{
+    background-color: yellowgreen;
+  }
+
   p {
   margin-bottom: 0.65rem;
   }
