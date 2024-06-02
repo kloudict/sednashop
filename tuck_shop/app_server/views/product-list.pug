@@ -1,59 +1,24 @@
 extends layout
+include _includes/sharedHTMLfunctions
 
 block content
     .row.banner
         .col-12
-            h1 Products in Store
-                small &nbsp;- Get Something to eat!
+            h1= pageHeader.title
+                small &nbsp;#{pageHeader.strapline}
     .row
         .col-12.col-md-8
-            .card
-                .card-block
-                    h4
-                        a(href="/products/product") Noodles
-                        small &nbsp;
-                            i.fas.fa-star
-                            i.fas.fa-star
-                            i.fas.fa-star
-                            i.far.fa-star
-                            i.far.fa-star
-                        span.badge.badge-pill.badge-default.float-right R5.00
-                    p.address 2 minute noodles ready instantly.
-                    p.facilities
-                        span.badge.badge-warning Durban Curry
-                        span.badge.badge-warning Chickey Mayo
-                        span.badge.badge-warning Beef
-            .card
-                .card-block
-                    h4
-                        a(href="/products/product") Energy Drink
-                        small &nbsp;
-                            i.fas.fa-star
-                            i.fas.fa-star
-                            i.fas.fa-star
-                            i.fas.fa-star
-                            i.far.fa-star
-                        span.badge.badge-pill.badge-default.float-right R15.00
-                    p.address Cool Down while you at it.
-                    p.facilities
-                        span.badge.badge-warning Monster
-                        span.badge.badge-warning RedBull
-                        span.badge.badge-warning MoFaya
-            .card
-                .card-block
-                    h4
-                        a(href="/products/product") Chips
-                        small &nbsp;
-                            i.fas.fa-star
-                            i.fas.fa-star
-                            i.fas.fa-star
-                            i.far.fa-star
-                            i.far.fa-star
-                        span.badge.badge-pill.badge-default.float-right R8.00
-                    p.address one snack a day keeps the hunger away
-                    p.facilities
-                        span.badge.badge-warning Simba
-                        span.badge.badge-warning Lays
-                        span.badge.badge-warning Niknaks
+            each product in products
+                .card
+                    .card-block
+                        h4
+                            a(href="/products/product")= product.name
+                            small &nbsp;
+                                +outputRating(product.rating)
+                            span.badge.badge-pill.badge-default.float-right= product.price
+                        p.address= product.description
+                        p.facilities
+                            each option in product.options
+                                span.badge.badge-warning= option
         .col-12.col-md-4
-                p.lead Looking for a quick meal? ShopApp helps you grab a meal, sign for it and only pay at the end of the month. Eat as much as you want and keep track of your bill.
+            p.lead= sidebar
